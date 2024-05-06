@@ -1,0 +1,4 @@
+include:
+  - project: byuhbll/support/gitlab/ci
+    ref: '1'
+    file: java-lib.yml

@@ -1,0 +1,9 @@
+/*
+!/.devcontainer/
+!/src/
+!/.gitignore
+!/.gitlab-ci.yml
+!/LICENSE.md
+!/lombok.config
+!/pom.xml
+!/README.md

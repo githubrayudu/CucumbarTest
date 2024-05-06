@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenModuleWizardParentPage">
+		<list key="moduleName">
+			<item value="EcommerceProject"/>
+			<item value="ecommers"/>
+			<item value="IRCTC"/>
+			<item value="IrctcProject"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="internal"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="dockerProject.dockerProject"/>
+		</list>
+		<list key="groupId">
+			<item value="dockerProject"/>
+		</list>
+		<list key="artifactId">
+			<item value="dockerProject"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.wizards.MavenProjectSelectionDialog">
+		<item key="width" value="480"/>
+		<item key="height" value="450"/>
+		<item key="x" value="720"/>
+		<item key="y" value="129"/>
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\EX perimental 1\eclipse-workspace\TestSelenium"/>
+			<item value="C:\Users\EX perimental 1\eclipse-workspace\Cucumber"/>
+			<item value="C:\Users\EX perimental 1\eclipse-workspace\JavaPrograming"/>
+			<item value="C:\Users\EX perimental 1\eclipse-workspace\EcommersProject"/>
+			<item value="C:\Users\EX perimental 1\eclipse-workspace\IrctcProject"/>
+			<item value="C:\Users\EX perimental 1\eclipse-workspace\EcommerceProject"/>
+			<item value="C:\Users\EX perimental 1\eclipse-workspace\SeleniumProject"/>
+			<item value="C:\Users\EX perimental 1\eclipse-workspace\IrctcProjectFolder"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.wizards.CustomArchetypeDialog">
+		<list key="archetypeGroupId">
+			<item value="Ecommerse"/>
+			<item value="EcommerceProject"/>
+		</list>
+		<list key="archetypeArtifactId">
+			<item value="Ecommerse"/>
+			<item value="EcommerceProject"/>
+		</list>
+		<list key="archetypeVersion">
+			<item value="Ecommerse"/>
+			<item value="EcommerceProject"/>
+		</list>
+		<list key="repositoryUrl">
+			<item value=""/>
+			<item value="EcommerceProject"/>
+		</list>
+	</section>
+	<section name="MavenCheckoutLocationPage">
+		<list key="scmUrl">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+</section>

@@ -1,0 +1,22 @@
+import java.time.Duration;
+
+import org.openqa.selenium.WebDriver;
+
+public class DatafromWebsiteToExcel {
+	
+	
+	public static WebDriver _driver;
+	
+	
+	public static void main(String[] args) {
+
+		base _base=new base(_driver);
+		_driver = _base.intializeDriver();
+		
+		_driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		
+		
+		
+	}
+
+}

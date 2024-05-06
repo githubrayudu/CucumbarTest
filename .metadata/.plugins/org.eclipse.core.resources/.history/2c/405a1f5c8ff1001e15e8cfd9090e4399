@@ -1,0 +1,21 @@
+package day2;
+
+public class DataTypeDemo
+{
+
+	public static void main(String[] args) {
+		
+		// premitive data type byte,shot,int,long ,flot ,double,char,boolean
+		
+		
+		int a; //delcaration 
+		a=100; // Assignement
+		
+		int b = 100; //declaration and Assignement 
+System.out.println(a+b);
+		
+		//non premitive data type /collection / derived data type String,ArrayList,Hashset,
+		
+	}
+
+}

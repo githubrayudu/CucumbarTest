@@ -1,0 +1,30 @@
+{
+  "image": "registry.gitlab.com/byuhbll/apps/images/java-dev:2",
+  "remoteUser": "vscode",
+  "runArgs": [
+    "--name=mavenproject-dev",
+    "--network=docker-environment_default",
+    "--group-add",
+    "${localEnv:DOCKER_GROUP_ID:9999}"
+  ],
+  "containerEnv": {
+    "TESTCONTAINERS_HOST_OVERRIDE": "host.docker.internal"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "redhat.fabric8-analytics",
+        "ilkka.google-java-format"
+      ],
+      "settings": {
+        "google-java-format.executable-path": "/usr/local/bin/google-java-format",
+        "java.compile.nullAnalysis.mode": "automatic",
+        "java.configuration.updateBuildConfiguration": "automatic"
+      }
+    }
+  },
+  "mounts": [
+    "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+  ]
+}

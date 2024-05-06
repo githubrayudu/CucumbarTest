@@ -1,0 +1,38 @@
+package day2;
+
+public class DataTypeDemo {
+
+	public static void main(String[] args) {
+
+		// premitive data type byte,shot,int,long ,flot ,double,char,boolean
+
+		int a; // delcaration
+		a = 100; // Assignement
+
+		int b = 100; // declaration and Assignement
+		System.out.println(a + b);
+		
+		
+		
+		// second type of delcaration 
+		
+		int ab,bc,de;
+		ab= 33;
+		bc=32;
+		de = 45;
+		System.out.println(ab+bc+de);
+		
+		// thired type of declaration 
+		
+		int aa= 299, bb= 399,cc=555;
+		
+		System.out.println(aa-bb+cc);
+		System.out.println(aa+" "+bb+" "+cc);
+		
+		
+		// non premitive data type /collection / derived data type
+		// String,ArrayList,Hashset,
+
+	}
+
+}

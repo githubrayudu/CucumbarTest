@@ -1,0 +1,77 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintStream;
+import java.util.List;
+
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class amazonPage {
+
+	WebDriver _driver;
+	private String productlist;
+
+	public amazonPage(WebDriver drv) {
+		this._driver = drv;
+	}
+
+	public void printAllItems(List<WebElement> items) {
+		for (int i = 0; i < items.size(); i++) {
+			System.out.println(items.get(i).getText() + "----->" + items.get(i).getText());
+		}
+	}
+
+	public List<WebElement> searchItems(String text) {
+		// search mobile under 10000 in amazon
+		_driver.findElement(By.id("twotabsearchtextbox")).clear();
+		_driver.findElement(By.id("twotabsearchtextbox")).sendKeys(text);
+
+		// Click on search button
+		_driver.findElement(By.id("nav-search-submit-button")).click();
+
+		// collect all the items from search results
+		List<WebElement> mobileNames = _driver.findElements(By.xpath("//div[@data-cy='title-recipe']//h2"));
+
+		return mobileNames;
+	}
+	
+	
+	
+
+	public  List<WebElement> ExportToNotePad(List<WebElement> fridges) throws IOException {
+		/*
+		 * try { PrintStream productlist = new PrintStream(new
+		 * File("C:\\Users\\EX perimental 1\\eclipse-workspace\\ProjectDataExtracted\\productFile.txt"
+		 * )); System.setOut(productlist); productlist.println(text);
+		 * 
+		 * } catch (FileNotFoundException ft) { System.out.println(ft); } return
+		 * productlist;
+		 */
+		
+		
+		try {
+			
+			XSSFWorkbook myworkbook = new XSSFWorkbook();
+			XSSFSheet mysheet = myworkbook.createSheet();
+			File fileF =new File("C:\\Users\\EX perimental 1\\eclipse-workspace\\ProjectDataExtracted\\List Of Products.xls");
+			FileOutputStream fop = new FileOutputStream(fileF);
+			myworkbook.write(fop);
+			fop.close();
+			
+		}
+			catch
+			 (FileNotFoundException ft) { System.out.println(ft); }
+		return fridges;
+
+	}
+
+	
+	
+}

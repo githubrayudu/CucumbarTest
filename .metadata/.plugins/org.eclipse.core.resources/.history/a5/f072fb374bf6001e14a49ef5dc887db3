@@ -1,0 +1,11 @@
+package mypac;
+
+public class MyTest {
+
+	public static void main(String[] args) {
+	
+			System.setProperty("webdriver.chrome.driver","C:\\selenium webdriver\\chromedriver.exe");
+
+	}
+
+}

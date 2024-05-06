@@ -1,0 +1,79 @@
+package day17;
+
+import java.awt.Window;
+import java.time.Duration;
+import java.util.concurrent.TimeUnit;
+
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane.MaximizeAction;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.Wait;
+
+
+/*
+1) Launch browser
+2) open url
+	https://opensource-demo.orangehrmlive.com/
+3) Provide username  - Admin
+4) Provide password  - admin123
+5) Click on Login button 
+6) Verify the title of dashboard page   
+	Exp title : OrangeHRM
+7) close browser
+
+ */
+
+public class irctcLoginTest {
+
+	public static void main(String[] args) throws InterruptedException {
+
+		// to disable the notification in chrome browsers
+
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--disable-notifications");
+
+		WebDriver driver = new ChromeDriver(options);
+//		driver.manage().timeouts().implicitlyWait(500,TimeUnit.MICROSECONDS);
+
+//		System.setProperty("webdriver.chrome.driver", "C:\\selenium webdriver\\chromedriver.exe");
+		driver.manage().window().maximize();
+
+		
+		//addin implecit wait to resolve some errors 
+		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+		
+		// Navigating to the url
+		driver.get("https://www.irctc.co.in/nget/train-search");
+
+		// finding the login element through the xpath and clicking on element
+		driver.findElement(By.xpath("//a[@aria-label='Click here to Login in application']")).click();
+//		 Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+//		    wait.until(d -> revealed.isDisplayed());
+		//provide user name and password 
+		driver.findElement(By.cssSelector("input.form-control input-box ng-pristine ng-valid ng-touched[placeholder='User Name']")).sendKeys("rayudu347");
+		driver.findElement(By.cssSelector("input.form-control input-box ng-pristine ng-valid ng-touched[placeholder='Password']")).sendKeys("roi328");
+		
+		//making an interruptedException for to enter the CAPTCHA  
+		
+		Thread.sleep(7000);
+		
+		//click on login 
+		driver.findElement(By.cssSelector(".ng-tns-c19-15.ui-dialog-mask.ui-widget-overlay.ui-dialog-visible.ui-dialog-mask-scrollblocker.ng-star-inserted")).click();
+		
+		
+		
+		
+	
+		
+		
+		// close browser
+//		driver.close();
+//		driver.quit();
+		
+
+	}
+
+}

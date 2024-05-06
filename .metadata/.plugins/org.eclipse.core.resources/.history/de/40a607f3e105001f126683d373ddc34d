@@ -1,0 +1,44 @@
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+import org.apache.poi.sl.usermodel.Sheet;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class MethodTesting {
+
+	public static void main(String[] args) throws IOException {
+		
+			FileOutputStream file = new FileOutputStream(System.getProperty("C:\\Users\\EX perimental 1\\eclipse-workspace\\ProjectDataExtracted\\testdata"));
+		
+			XSSFWorkbook workbook= new XSSFWorkbook();
+			
+			XSSFSheet mysheet = workbook.createSheet();
+			
+			XSSFRow row0 = mysheet.createRow(0);
+			XSSFRow row1 = mysheet.createRow(1);
+			
+			
+			row0.createCell(1).setCellValue("welcom");
+			row0.createCell(2).setCellValue("3163");
+			row0.createCell(3).setCellValue("wef");
+			
+			row1.createCell(1).setCellValue("zxcdv");
+			row1.createCell(2).setCellValue("6546");
+			row1.createCell(3).setCellValue("efegfefefe");
+			
+			workbook.write(file);
+			workbook.close();
+			file.close();
+		
+		System.out.println("Writing is done!!!");
+		
+	}
+		
+			
+	}
+
+

@@ -1,0 +1,24 @@
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class base {
+
+	WebDriver _driver;
+
+	// this is the constructor which is calling
+	public base(WebDriver drv) {
+		this._driver = drv;
+	}
+	public WebDriver intializeDriver() {
+		// Initialize Chrome driver
+		_driver = new ChromeDriver();
+
+		// Launch Amazon application
+		_driver.get("https://www.amazon.in/");
+
+		// maximize driver
+		_driver.manage().window().maximize();
+
+		return _driver;
+	}
+}

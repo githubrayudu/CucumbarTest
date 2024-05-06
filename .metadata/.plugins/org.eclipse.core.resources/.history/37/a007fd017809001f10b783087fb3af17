@@ -1,0 +1,68 @@
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class WritingextractedDataIntoExcel {
+	
+	
+	
+	String path;
+	
+	
+	WritingextractedDataIntoExcel(String path) {
+		
+		this.path= path;
+	}
+	
+	
+	XSSFWorkbook workbook = new XSSFWorkbook();
+	
+	XSSFSheet sheet = workbook.createSheet();
+	
+			
+	
+	public void setCellData(String sheetName,int rownum,int colnum,String data ) throws IOException {
+		
+		
+		//to check the file exists or not 
+		
+		
+	
+		
+		File exlfile = new File(path);
+		// if file not exists then creat new file 
+		
+		if (!exlfile.exists())   
+		{
+			
+			workbook =new XSSFWorkbook();
+			FileOutputStream fileout = new FileOutputStream(path);
+			workbook.write(fileout);
+		}
+		
+		FileInputStream fileinput = new FileInputStream(path);
+		workbook = new XSSFWorkbook(fileinput);
+		
+		//if sheet not exists then create new Sheet 
+		
+		if (workbook.getSheetIndex(sheetName)==-1)  
+				workbook.createSheet();
+				sheet= workbook.getSheet(sheetName);
+
+				// if the row not exists the create new row
+		if (sheet.getrow(rownum))==null) 
+				sheet.createRow(rownum);
+				row = sheet.getRow(rownum);
+				
+			cell=row.
+	}
+
+
+	
+
+}
